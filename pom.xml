@@ -653,6 +653,26 @@
             <skip>false</skip>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.pitest</groupId>
+          <artifactId>pitest-maven</artifactId>
+          <version>1.5.2</version>
+          <configuration>
+            <targetClasses>
+              <param>org.apache.commons.lang3.*</param>
+            </targetClasses>
+            <targetTests>
+              <param>org.apache.commons.lang3.*</param>
+            </targetTests>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.pitest</groupId>
+              <artifactId>pitest-junit5-plugin</artifactId>
+              <version>0.12</version>
+            </dependency>
+          </dependencies>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>

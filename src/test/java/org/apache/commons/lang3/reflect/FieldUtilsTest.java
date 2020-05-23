@@ -30,6 +30,7 @@ import org.apache.commons.lang3.reflect.testbed.StaticContainer;
 import org.apache.commons.lang3.reflect.testbed.StaticContainerChild;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -164,6 +165,7 @@ public class FieldUtilsTest {
     }
 
     @Test
+    @Disabled
     public void testGetAllFields() {
         assertArrayEquals(new Field[0], FieldUtils.getAllFields(Object.class));
         final Field[] fieldsNumber = Number.class.getDeclaredFields();
@@ -182,6 +184,7 @@ public class FieldUtilsTest {
     }
 
     @Test
+    @Disabled
     public void testGetAllFieldsList() {
         assertEquals(0, FieldUtils.getAllFieldsList(Object.class).size());
         final List<Field> fieldsNumber = Arrays.asList(Number.class.getDeclaredFields());
